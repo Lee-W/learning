@@ -38,6 +38,7 @@ class MyHtmlParser(HTMLParser):
 
 import urllib.request
 
+
 def turnWebHtmlIntoStr(webSite):
     web = urllib.request.urlopen(webSite)
     webContent = web.read().decode("utf8")
@@ -48,7 +49,7 @@ if __name__ == '__main__':
     webSite = "http://yahoo.com.tw"
     webContent = turnWebHtmlIntoStr(webSite)
 
-    parser = MyHtmlParser(strict=False)
+    parser = MyHtmlParser()
     #feed string into parser
     for line in webContent.splitlines():
         parser.feed(str(line))
