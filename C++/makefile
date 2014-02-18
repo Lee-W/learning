@@ -11,6 +11,8 @@ pair : ./STL/pair.cpp
 	$(CPP) -o $@ $<
 to_upper_or_lower : ./STL/to_upper_or_lower.cpp
 	$(CPP) -o $@ $<
+bound : ./STL/bound.cpp
+	$(CPP) -o $@ $<
 
 #algorthm
 closest_pair_problem : ./algorithm/closest_pair_problem.cpp
