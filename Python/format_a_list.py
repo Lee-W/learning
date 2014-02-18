@@ -1,4 +1,4 @@
-s = "{0}\t{1}qwe {2} yyy"
-a = [1, 'asd', 'xxx']
+formatStr = "{0:.2f}\t{1:5s}\t{2:3d}"
+a = [1.56666, 'asd', 12]
 
-print (s.format(*a))
+print (formatStr.format(*a))
