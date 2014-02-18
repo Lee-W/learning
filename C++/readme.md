@@ -8,6 +8,11 @@ There are two types of examples. -> algorithm , STL
 make "filename"
 ./"filename"
 ```
+There might be some examples that need user input.  
+I recommend you to use input redirection.  
+There will be at these one sample input in folder at the same level of those examples.
+
+
 #File name
 ##algorithm
 - BFS

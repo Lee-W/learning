@@ -15,9 +15,9 @@ to_upper_or_lower : ./STL/to_upper_or_lower.cpp
 #algorthm
 closest_pair_problem : ./algorithm/closest_pair_problem.cpp
 	$(CPP) -o $@ $< $(C11)
-BFS : ./algorithm/BFS.cpp
+BFS : ./algorithm/graph/BFS.cpp
 	$(CPP) -o $@ $<
-DFS : ./algorithm/DFS.cpp
+DFS : ./algorithm/graph/DFS.cpp
 	$(CPP) -o $@ $<
 
 clean:
