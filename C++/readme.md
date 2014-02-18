@@ -17,7 +17,7 @@ There will be at these one sample input in folder at the same level of those exa
 ##algorithm
 - BFS
 - DFS
-- closest_pair_problem
+- closest_pair_problem  
 These code is based on http://www.csie.ntnu.edu.tw/~u91029/
 
 ##STL
