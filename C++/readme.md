@@ -16,9 +16,10 @@ make "filename"
 These code is based on http://www.csie.ntnu.edu.tw/~u91029/
 
 ##STL
-- for_each.
+- for_each
 - pair
 - to_upper_or_lower
+- vector_find
 
 #AUTHORS
 [Lee-W](https://github.com/Lee-W/)

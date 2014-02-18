@@ -1,11 +1,11 @@
-#STL
+#Python
 #DESCRIPTION
-Some example for C++ STL
+Some examples written in Python 3.
 
 #USAGE
-```shell
-make "filename"
-./"filename"
 ```
+python3 "file name"
+```
+
 #AUTHORS
 [Lee-W](https://github.com/Lee-W/)
