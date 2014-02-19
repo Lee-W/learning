@@ -5,8 +5,8 @@ There are two types of examples. -> algorithm , STL
 
 #USAGE
 ```shell
-make "filename"
-./"filename"
+g++ -o "name of executable file"  "filname" -"lib used"
+./"name executable of executable file"
 ```
 There might be some examples that need user input.  
 I recommend you to use input redirection.  
