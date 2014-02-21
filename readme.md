@@ -6,7 +6,8 @@ If there is any copyright issue.
 Please contact me by email cl87654321@gmail.com.  
 
 #USAGE
-Currently there are three types of examples
+Currently there are 4 types of examples  
+- C#
 - C++
 - html 5
 - Python
