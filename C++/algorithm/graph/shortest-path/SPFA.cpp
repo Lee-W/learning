@@ -39,7 +39,7 @@ void SPFA(int vertexNum, int source) {
             if (dis[current] + cost < dis[destination]) {
                 dis[destination] = dis[current] + cost;
                 if (!inqueue[destination]) {
-                    q.push_back(destination);
+                    q.push(destination);
                     inqueue[destination]  = true;
                 }
             }
@@ -55,8 +55,11 @@ main()
     cin >> vertexNum >> edgeNum;
     for (int i = 0; i < edgeNum; i++) {
         cin >> source >> destination >> cost;
-        e[source].destination = destination;
-        e[source].cost = cost;
+        edge tmp;
+        tmp.destination = destination;
+        tmp.cost = cost;
+        e[source].push_back(tmp);
+        //e[destination].push_back(tmp);    //for bi-direction graph
     }
     SPFA(vertexNum, 0);
 }
