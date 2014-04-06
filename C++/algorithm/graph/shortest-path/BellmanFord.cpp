@@ -1,3 +1,5 @@
+//for discrete edge structure
+
 #include <iostream>
 #include <climits>
 using namespace std;
