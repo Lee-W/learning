@@ -41,7 +41,6 @@ main()
     sort(p,p+5);
     for (int i = 0; i < 5; i++)
         cout<<p[i].first<<"\t"<<p[i].second<<endl;
-
 }
 
 void setPoint(point&p , int x, int y) {

@@ -5,7 +5,6 @@
 #include <iostream>
 using namespace std;
 
-
 main () {
     string str = "ABcDEfghiJkLmnOpQrStUVwXyZ";
     printf("original : %s\n",str.c_str());

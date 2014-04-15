@@ -25,7 +25,6 @@ main()
     DFS(0);
 }
 
-
 void DFS(int i)
 {
     for (int j = 0; j < vertextNum; j++)

@@ -33,8 +33,7 @@ main()
         capacity[start][end] = cap;
     }
 
-    printf("The bandwidth is %d.\n", FordFlukerson(source, sink, n));
-    printf("\n");
+    printf("%d.\n", FordFlukerson(source, sink, n));
 }
 
 int FordFlukerson(int s,int t,int n) {

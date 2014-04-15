@@ -19,7 +19,6 @@ void BFS(int);
 
 main()
 {
-
     // initial adjacencyMatrix
     for (int i = 0; i < vertextNum; i++)
         for (int j = 0; j < vertextNum; j++)
