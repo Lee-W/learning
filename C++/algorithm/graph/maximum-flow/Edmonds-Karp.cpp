@@ -29,6 +29,7 @@ main()
         scanf("%d%d%d", &start, &end, &cap);
         capacity[start][end] = cap;
     }
+    init();
     printf("%d\n", EdmondsKarp(source, sink, n+2));
 }
 
