@@ -10,7 +10,7 @@ void Floyd(int n) {
     for (int mid = 0; mid < n; mid++)
         for (int source = 0; source < n; source++)
             for (int destination = 0; destination < n; destination++)
-                if (dis[source][destination] < dis[source][mid] + dis[mid][destination])
+                if (dis[source][destination] > dis[source][mid] + dis[mid][destination])
                     dis[source][destination] = dis[source][mid] + dis[mid][destination];
 }
 
