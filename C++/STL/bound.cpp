@@ -3,21 +3,13 @@
 #include <vector>
 using namespace std;
 
-main()
-{
-    vector<int> v;
-    v.reserve(10);
+vector<int> v;
 
-    v.push_back(1);
-    v.push_back(1);
-    v.push_back(1);
-    v.push_back(2);
-    v.push_back(2);
-    v.push_back(2);
-    v.push_back(2);
-    v.push_back(2);
-    v.push_back(3);
-    v.push_back(3);
+void init();
+
+int main()
+{
+    init(); //1 1 1 2 2 2 2 2 3 3 3
 
     cout << "Index : " <<endl;
     for (int i = 0; i < v.size(); i++)
@@ -42,4 +34,19 @@ main()
     it = upper_bound(v.begin(), v.end(), 4);
     cout << "upper bound of 4 is " << it - v.begin() << endl;
 
+}
+
+void init() {
+    v.reserve(10);
+
+    v.push_back(1);
+    v.push_back(1);
+    v.push_back(1);
+    v.push_back(2);
+    v.push_back(2);
+    v.push_back(2);
+    v.push_back(2);
+    v.push_back(2);
+    v.push_back(3);
+    v.push_back(3);
 }
