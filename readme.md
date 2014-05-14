@@ -7,7 +7,6 @@ Please contact me by email cl87654321@gmail.com.
 
 #USAGE
 Currently there are 4 types of examples  
-- C#
 - C++
 - html 5
 - Python
