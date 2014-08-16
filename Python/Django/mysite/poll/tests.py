@@ -62,4 +62,13 @@ class PollViewTests(TestCase):
              ['<Poll: Past poll 1.>', '<Poll: Past poll 2.>']
         )
 
-class DeatilViewTests(TestCase):
+class PollIndexDetailTests(TestCase):
+    def test_detail_view_with_a_future_poll(self):
+        future_poll = create_poll(question='Future Poll.', days=5)
+        response = self.client.get(reverse('poll:detail', args=(future_poll.id,)))
+        self.assertEqual(response.status_code, 404)
+
+    def test_detail_view_with_a_past_poll(self):
+        past_poll = create_poll(question='Past Poll.', days=-5)
+        response = self.client.get(reverse('poll:detail', args=(past_poll.id,)))
+        self.assertContains(response, past_poll.question, status_code=200)

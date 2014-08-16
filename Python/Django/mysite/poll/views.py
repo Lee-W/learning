@@ -18,6 +18,9 @@ class DetailView(generic.DetailView):
     model = Poll
     template_name = 'poll/detail.html'
 
+    def get_queryset(self):
+        return Poll.objects.filter(pub_date__lte=timezone.now())
+
 
 class ResultView(generic.DetailView):
     model = Poll
@@ -39,16 +42,3 @@ def vote(request, poll_id):
         selected_choice.save()
         return HttpResponseRedirect(reverse('poll:result', args=(p.id,)))
 
-# def index(request):
-#     latest_poll_list = Poll.objects.order_by('pub_date')[:5]
-#     context = {'latest_poll_list': latest_poll_list}
-#     return render(request, 'poll/index.html', context)
-#
-# def detail(request, poll_id):
-#     poll = get_object_or_404(Poll, pk=poll_id)
-#     return render(request, 'poll/detail.html', {'poll': poll})
-#
-# def result(request, poll_id):
-#     poll = get_object_or_404(Poll, pk=poll_id)
-#     return render(request, 'poll/result.html', {'poll': poll})
-#
