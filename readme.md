@@ -3,7 +3,7 @@
 Some examples for learning programming.  
 
 #USAGE
-Currently there are 4 types of examples  
+Currently there are 3 types of examples  
 - C++
 - html 5
 - Python
