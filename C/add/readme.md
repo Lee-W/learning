@@ -1,22 +1,22 @@
-#add
-#DESCRIPTION
+# add
+
+# DESCRIPTION
 Implement two input add with only logic operator, if statement and recursive
 
-#USAGE
+# USAGE
 ```
 gcc -o add add.c
 add first second
 ```
-
-e.g.
+For example,
 ```
 $ add 1 2
 $ 3
 ```
 
-#AUTHORS
+# AUTHORS
 [Lee-W](https://github.com/Lee-W/)
 
-#LICENSE
+# LICENSE
 MIT
 
