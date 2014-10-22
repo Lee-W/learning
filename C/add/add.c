@@ -12,13 +12,9 @@ int add(int a, int b) {
 }
 
 int main(int argc, char* argv[]) {
-    int i = 0;
-    int j = 0;
-
-    for (i = 0; i < 10000; i++)
-        for (j = 0; j < 10000; j++ )
-            if (add(i, j) != (i+j))
-                printf ("QQQ\n");
-
+    int a, b, c;
+    printf("Please input two integer:\n");
+    scanf("%d %d",&a ,&b);
+    printf("%d + %d = %d", a, b, add(a,b));
 }
 
