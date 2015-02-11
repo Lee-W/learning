@@ -1,5 +1,4 @@
 #include <iostream>
-#include <algorithm>
 using namespace std;
 
 const int vertextNum = 6;
@@ -8,29 +7,29 @@ bool visited[vertextNum];
 
 void DFS(int);
 
-main()
+int main()
 {
     // initial adjacencyMatrix
     for (int i = 0; i < vertextNum; i++)
         for (int j = 0; j < vertextNum; j++)
-            cin>>adjacencyMatrix[i][j];
+            cin >> adjacencyMatrix[i][j];
 
     //initial visited
     for (int i = 0; i < vertextNum; i++)
         visited[i] = false;
 
     //start point
-    cout<<0<<endl;
-    visited[0] = true;
-    DFS(0);
+    int startPoint = 0;
+    cout << startPoint << endl;
+    visited[startPoint] = true;
+    DFS(startPoint);
 }
 
-void DFS(int i)
-{
+void DFS(int i) {
     for (int j = 0; j < vertextNum; j++)
         if (adjacencyMatrix[i][j] && !visited[j]) {
             visited[j] = true;
-            cout<<j<<endl;
+            cout << j << endl;
             DFS(j);
         }
 }

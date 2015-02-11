@@ -40,7 +40,7 @@ void BellmanFord(int vertexNum, int edgeNum, int source) {
     */
 }
 
-main()
+int main()
 {
     int vertexNum, edgeNum;
 

@@ -17,12 +17,12 @@ bool visited[vertextNum];
 
 void BFS(int);
 
-main()
+int main()
 {
     // initial adjacencyMatrix
     for (int i = 0; i < vertextNum; i++)
         for (int j = 0; j < vertextNum; j++)
-            cin>>adjacencyMatrix[i][j];
+            cin >> adjacencyMatrix[i][j];
 
     //initial visited
     for (int i = 0; i < vertextNum; i++)

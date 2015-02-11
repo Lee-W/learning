@@ -16,6 +16,7 @@ int SCC[maxN];
 
 void init(int);
 void tarjan(int);
+
 int main()
 {
     int vertextNum, edgeNum;
