@@ -47,7 +47,7 @@ void SPFA(int vertexNum, int source) {
     }
 }
 
-main()
+int main()
 {
     int vertexNum, edgeNum;
     int source, destination, cost;

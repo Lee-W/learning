@@ -16,7 +16,7 @@ int FordFlukerson(int,int,int);
 bool DFS(int,int,int);
 int findFlow(int,int);
 
-main()
+int main()
 {
     int n, source, sink, conntectionNum;
     int start, end, cap;

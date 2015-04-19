@@ -14,7 +14,7 @@ void Floyd(int n) {
                     dis[source][destination] = dis[source][mid] + dis[mid][destination];
 }
 
-main()
+int main()
 {
     int n;
     scanf("%d", &n);

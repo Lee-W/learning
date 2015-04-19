@@ -18,9 +18,9 @@ int main()
     int vertexNum, edgeNum;
     int source, destination;
     while (scanf("%d%d", &vertexNum, &edgeNum)) {
-        init(vertextNum);
+        init(vertexNum);
         while(edgeNum--) {
-            scnaf("%d%d", &source, &destination);
+            scanf("%d%d", &source, &destination);
             edge[source].push_back(destination);
         }
 

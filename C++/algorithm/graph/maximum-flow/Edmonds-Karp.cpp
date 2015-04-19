@@ -16,7 +16,7 @@ int path[maxN], bottleneck[maxN];
 void init();
 int EdmondsKarp(int, int, int);
 
-main()
+int main()
 {
     int n, source, sink, conntectionNum;
     int start, end, cap;
@@ -70,7 +70,7 @@ int BFS(int s, int t, int n) {
 
 int EdmondsKarp(int s, int t, int n) {
     int maxFlow = 0, currentFlow;
-    while (currentFlow = BFS(s, t ,n)) {
+    while (currentFlow == BFS(s, t ,n)) {
         int pre = path[t], cur = t;
         while(pre != cur) {
             flow[pre][cur] = flow[pre][cur] + currentFlow;

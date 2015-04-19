@@ -19,7 +19,7 @@ bool DFS(int);
 int main()
 {
     int nL, nR;
-
+    int n, m;
     while(scanf("%d%d", &n, &m) == 2) {
         initEdge(nL, nR);
         printf("%d\n", n - Bipartite(n, m));

@@ -1,8 +1,7 @@
 /*
     complexity :
-        adjacency list : O(V*E)
+        adjacency list : O(V+E)
         adjacency matrix : O(V^2)
-
 */
 
 #include <iostream>

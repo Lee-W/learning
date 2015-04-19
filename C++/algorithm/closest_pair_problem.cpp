@@ -7,7 +7,7 @@ using namespace std;
 void printPoint(pair<double,double>);
 double countDistance(pair<double,double>,pair<double,double>);
 
-main ()
+int main ()
 {
     //this can be used only in c++11
     pair<double,double> point[10] = {{3, 3}, {1, 5}, {4, 6}, {2, 8}, {9, 9},{2, 1}, {7, 2}, {6, 5}, {9, 4}, {5, 9}};
