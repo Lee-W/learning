@@ -9,12 +9,13 @@ using namespace std;
 #define maxM 10005
 #define INF INT_MAX/5
 
-int capacity[maxN][maxN], flow[maxN][maxN], residual[maxN][maxN];
+int flowCapacity[maxN][maxN], flow[maxN][maxN], residual[maxN][maxN];
 bool visited[maxN];
 int path[maxN], bottleneck[maxN];
 
 void init();
 int EdmondsKarp(int, int, int);
+int BFS(int, int, int);
 
 int main()
 {
@@ -23,11 +24,11 @@ int main()
 
     scanf("%d", &n);
     scanf("%d%d%d", &source, &sink, &conntectionNum);
-    memset(capacity, 0, sizeof(capacity));
+    memset(flowCapacity, 0, sizeof(flowCapacity));
 
     while(conntectionNum--) {
         scanf("%d%d%d", &start, &end, &cap);
-        capacity[start][end] = cap;
+        flowCapacity[start][end] = cap;
     }
     init();
     printf("%d\n", EdmondsKarp(source, sink, n+2));
@@ -36,9 +37,28 @@ int main()
 
 void init() {
     memset(flow, 0, sizeof(flow));
-    memcpy(residual, capacity, sizeof(capacity));
+    memcpy(residual, flowCapacity, sizeof(flowCapacity));
     memset(path, -1, sizeof(path));
     memset(bottleneck, 0, sizeof(bottleneck));
+}
+
+int EdmondsKarp(int s, int t, int n) {
+    int maxFlow = 0;
+    int currentFlow;
+    while ((currentFlow = BFS(s, t ,n) != 0)) {
+        int pre = path[t];
+        int cur = t;
+        while(pre != cur) {
+            flow[pre][cur] = flow[pre][cur] + currentFlow;
+            flow[cur][pre] = -flow[pre][cur];
+            residual[pre][cur] = flowCapacity[pre][cur] - flow[pre][cur];
+            residual[cur][pre] = flowCapacity[cur][pre] - flow[cur][pre];
+            cur = pre;
+            pre = path[cur];
+        }
+        maxFlow += currentFlow;
+    }
+    return maxFlow;
 }
 
 int BFS(int s, int t, int n) {
@@ -66,21 +86,4 @@ int BFS(int s, int t, int n) {
             }
     }
     return 0;
-}
-
-int EdmondsKarp(int s, int t, int n) {
-    int maxFlow = 0, currentFlow;
-    while (currentFlow == BFS(s, t ,n)) {
-        int pre = path[t], cur = t;
-        while(pre != cur) {
-            flow[pre][cur] = flow[pre][cur] + currentFlow;
-            flow[cur][pre] = -flow[pre][cur];
-            residual[pre][cur] = capacity[pre][cur] - flow[pre][cur];
-            residual[cur][pre] = capacity[cur][pre] - flow[cur][pre];
-            cur = pre;
-            pre = path[cur];
-        }
-        maxFlow += currentFlow;
-    }
-    return maxFlow;
 }
